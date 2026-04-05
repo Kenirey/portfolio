@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tip-container{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    border: 1px black solid;
+    padding: 10px;
+    gap: 10px;
+}
+.tip-container input{
+    height: 30px;
+    border: 1px black solid;
+}
+.tip-container button{
+    
+    height: 40px;
+    width: 70px;
+}

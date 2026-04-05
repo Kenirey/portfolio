@@ -1,0 +1,35 @@
+
+#counter{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#label{
+    font-weight: bold;
+    font-size: xx-large;
+}
+.btn{
+    padding: 10px;
+    color:white;
+    width: 100px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+#Decrease{
+    background-color: red;
+}
+#Reset{
+    background-color: orange;
+}
+#Increase{
+    background-color: green;
+}
+#plusfive{
+    background-color: yellowgreen;
+}
+#minusfive{
+    background-color: rgb(239, 102, 102);
+}

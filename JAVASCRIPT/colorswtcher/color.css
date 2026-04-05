@@ -1,0 +1,27 @@
+.btns{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn{
+    width: 100px;
+    padding:30px;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+#red{
+    background-color: red;
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
+#yellow{
+    background-color: yellow;
+    color: black;
+}
