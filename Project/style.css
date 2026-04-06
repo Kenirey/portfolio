@@ -282,7 +282,7 @@ overflow-x: hidden;
 .goals {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   min-width: 0; 
 }
@@ -291,6 +291,9 @@ overflow-x: hidden;
   box-sizing: border-box;
   overflow-wrap: anywhere;
   word-break: break-word;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  padding: 15px;
 }
 
 
@@ -704,7 +707,7 @@ body.dark-mode .timeline-item::before {
 .card:nth-child(7) { transition-delay: 0.7s; }
 .card:nth-child(8) { transition-delay: 0.8s; }
 
-/* EXTRA SMALL DEVICES (phones < 480px) */
+
 @media (max-width: 480px) {
 
   .hero {
