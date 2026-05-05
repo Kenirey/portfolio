@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    border: 1px black solid;
+    align-items: center;
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+.taskinput{
+    padding: 20px;
+    display: flex;
+    gap: 5px;
+   justify-content: center;
+}
+.taskinput input{
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.taskinput button{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+main{
+    width: 78%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    gap: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 200px;
+}
+.todo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    
+  
+
+}
+.todo div{
+    display: flex;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid black;
+    gap: 10PX;
+    justify-content: space-between;
+
+
+}
+.done {
+    text-decoration: line-through;
+    color: gray;
+}

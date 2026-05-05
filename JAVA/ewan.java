@@ -1,3 +1,4 @@
+package JAVA;
 import java.io.*;
 import java.util.*;
 public class ewan {
@@ -40,6 +41,7 @@ public class ewan {
             bw.newLine();
         }
     }
+    
     static void read()throws IOException{
         try(BufferedReader br = new BufferedReader(new FileReader(Filename))){
             String line;

@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.bar-size{
+    width: 300px;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    gap: 10px;
+    justify-items: flex-end;
+}
+.bar1{
+    color: green;
+    width: 10px;
+    
+}

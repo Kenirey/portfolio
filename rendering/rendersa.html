@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="foodInput" placeholder="Mag-add ng food">
+<button id="addBtn">Add</button>
+    <div id="list"></div>
+
+
+
+       <script>
+
+
+            let foods = []
+
+            function foodRender(){
+                let foodcontainer = document.getElementById('list')
+
+                foodcontainer.innerHTML = foods.map((food,index )=>
+                    `<p>${food}
+                    <button onclick ="deletebtn(${index})">Delete</button> </p>`
+                ).join("")
+            }
+
+            let addBtn = document.getElementById('addBtn')
+
+addBtn.addEventListener('click', function() {
+  let newFood = document.getElementById('foodInput').value
+  
+  if(newFood !== "") {
+    foods.push(newFood) 
+    document.getElementById('foodInput').value = "" 
+    foodRender()         
+  }
+  else{
+    alert("please input")
+  }
+})
+
+function deletebtn(index){
+foods = foods.filter((food,i)=> i !==index)
+foodRender()
+}
+
+       </script>
+</body>
+</html>

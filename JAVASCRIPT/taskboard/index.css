@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+}
+.taskboard{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "sidebar topbar"
+    "sidebar main";
+    min-height: 100vh;
+}
+.sidebar{
+    grid-area: sidebar;
+    width: 200px;
+    background: #0a0a11;
+    border-right: 1px gray solid;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.logo{
+    color: white;
+    text-align: center;
+    border-bottom: 1px gray solid;
+    padding: 10px;
+
+}
+.logo span{
+    color: purple;
+}
+.navlinks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
+}
+.link{
+    font-size: larger;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+.link:hover {
+    background: rgba(124,111,255,0.12);
+    color: #a99fff;
+    border-left: 2px solid #7c6fff;
+    padding-left: 18px;
+  }
+
+
+.topbar{
+    background: #0d0d14;
+    grid-area: topbar;
+    border-bottom: 1px gray solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.title{
+    font-family: sans-serif;
+}
+.topbar-right{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    
+}
+.badge{
+    background-color: rgb(215, 154, 40);
+    color: rgb(126, 84, 5);
+    font-size: small;
+    padding: 3px;
+    border-radius: 2px;
+}
+.avatar{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: plum;
+}
+
+.main{
+    gap: 30px;
+    background-color: #0d0d14;
+    background-image: 
+      repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(111, 43, 114, 0.881) 30px),
+      repeating-linear-gradient(90deg, transparent, transparent 29px, rgba(107, 32, 103, 0.728) 30px);
+    grid-area: main;
+        display: flex;
+        flex-direction: column;
+}
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.card-title{
+    color: gray;
+}
+.stats p{
+    color: gray;
+}
+.recent-task{
+    display: flex;
+    justify-content: space-between;
+}
+table{
+    background-color: gray;
+    padding: 30px;
+}

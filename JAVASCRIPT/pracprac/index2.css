@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.card{
+    padding: 20px;
+    width: 250px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: rgb(159, 18, 58);
+    border: none;
+    
+}
+.plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.plan span{
+    font-size: smaller;
+    color: rgb(234, 145, 145);
+    height: 10px;
+}
+.popular{
+    background-color: rgb(215, 131, 131);
+    border-radius: 25px;
+    padding: 5px;
+    display: flex;
+    font-size: small;
+    color: rgb(75, 22, 22);
+}
+.price{
+    display: flex;
+    align-items: end;
+    gap: 3px;
+    padding: 2px;
+    border-bottom: 1px gray solid;
+}
+.price h1 {
+    color: rgb(182, 131, 131);
+    
+}
+.price span{
+    color: rgb(156, 151, 151);
+    font-size: small;
+}
+.perks{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+.perk{
+   
+    color: rgb(236, 169, 166);
+}
+.not-perk{
+    color: gray;
+    text-decoration: line-through;
+}
+.perk::before {
+    content: "✓ ";
+    color: rgb(238, 144, 144);
+}
+.not-perk::before {
+    content: "✗ ";
+    color: gray;
+}
+.button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(189, 86, 86);
+    color: rgb(228, 198, 198);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button:hover{
+background-color:  rgb(228, 198, 198);
+color: rgb(189, 86, 86);
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+
+        }
+        th{
+            padding: 10px;
+            border: 1px solid black;
+            
+        }
+        td{
+            padding: 10px;
+            border: 1px solid black;
+            
+        }
+        input{
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 400px;
+            align-items: center;
+            padding: 20px;
+        }
+        button{
+            width: 100px;
+            border-radius: 10px;
+            height: 40px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<input type="number" name="" id="studnumber" placeholder="enter student number">
+<input type="text" name="" id="nameinp" placeholder="enter name">
+<input type="number" name="" id="gradeinp" placeholder="enter grade">
+<button id="submitbtn">Sumbmit</button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Stdent Number</th>
+            <th>Student Name</th>
+            <th>Grade</th>
+            <th>Reamarks</th>
+        </tr>
+    </thead>
+
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+
+
+
+    <script>
+
+        function tableRender(){
+            let tbody = document.getElementById('tbody')
+        tbody.innerHTML = students.map((students)=>
+        `<tr>
+                <td>${students.sNum}</td>
+                <td>${students.sName}</td>
+                <td>${students.sGrade}</td>
+                  <td>${students.sGrade >= 75? "Passed": "Failed"}</td>
+            
+            </tr>`).join("") 
+        }
+     
+        let sumbit = document.getElementById('submitbtn')
+        let students = []
+
+        sumbit.addEventListener("click",function(){
+        let studnumber = Number(document.getElementById('studnumber').value)
+        let studname = document.getElementById('nameinp').value
+        let studgrade =parseFloat(document.getElementById('gradeinp').value)
+
+        if (!isNaN(studnumber) && studname !=="" && studname !==null && !isNaN(studgrade)) {
+            students.push(
+                {sNum:studnumber, sName: studname, sGrade:studgrade}
+            )
+            console.log(students)
+            alert("Student Info added")
+            document.getElementById('studnumber').value = ""
+            document.getElementById('nameinp').value = ""
+            document.getElementById('gradeinp').value = ""
+            tableRender()
+
+        }else{
+            alert("Please Fill up all requirments!")
+        }
+
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>

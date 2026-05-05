@@ -22,8 +22,7 @@ document.getElementById("mysubmit").onclick = function(){
     age+=1;
     console.log(age, typeof age);
 }
-*/
-/*
+
 const PI = 3.14159;
 let radius;
 let circumference;

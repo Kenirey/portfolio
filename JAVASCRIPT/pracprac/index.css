@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.cardd{
+        width: 400px;
+        padding: 20px;
+        border: 1px black solid;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-radius: 25px;
+        background-color: rgb(37, 36, 36);
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profile h1{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(174, 225, 36);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.profile p{
+    background-color: rgb(187, 243, 74);
+    color: rgb(55, 79, 7);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 25px;
+    height: 20px;
+    padding: 15px;
+
+    
+}
+.name{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    
+}
+.bio{
+    color: gray;
+}
+.card-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px gray solid;
+}
+.card{
+    padding: 20px;
+  
+}
+.card h3{
+    color: white;
+    font-size: 30px;
+}
+.card p{
+    color: gray;
+    font-size: 15px;
+}
+.card2{
+    border-right: 1px gray solid;
+    border-left: 1px gray solid;
+
+}
+.description{
+    color: gray;
+}
+.btn-links{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.btn{
+    padding: 10px;
+    background-color: rgb(47, 45, 45);
+    color: gray;
+    border-radius: 8px;
+    border: none;
+    width: 100px;
+    transition: 0.3s;   
+    cursor: pointer;
+    
+}
+.btn:hover{
+    border: 1px rgb(138, 219, 16) solid;
+    color: rgb(138, 219, 16);
+}
+.follow-btn{
+    height: 50px;
+    background-color: rgb(187, 243, 74);
+    color: black;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+.follow-btn:hover{
+    background-color: black;
+    color: rgb(187, 243, 74);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        /*
+let user = { name: "Ken", age: 20 }
+
+localStorage.setItem("users", JSON.stringify(user))
+localStorage.getItem("users")
+JSON.parse(localStorage.getItem("users"))
+
+const result = JSON.parse(localStorage.getItem("users"))
+console.log(result)
+*/
+
+const users = [
+  { name: "Ken", age: 20 },
+  { name: "Jay", age: 22 }
+]
+
+localStorage.setItem("key", JSON.stringify(users))
+localStorage.getItem("key")
+
+JSON.parse(localStorage.getItem("key"))
+const result = JSON.parse(localStorage.getItem("key"))
+
+console.log(result[1].name)
+
+    </script>
+</body>
+</html>

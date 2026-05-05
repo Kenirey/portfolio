@@ -82,6 +82,9 @@ overflow-x: hidden;
     background-color: #111827;
     color: white;
 }
+.tag, .tag1:hover{
+  cursor: pointer;
+}
 .card-about { 
     padding: 50px 70px 50px 70px;
     grid-area: about; 

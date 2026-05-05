@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.laman{
+    width: 50%;
+    
+}
+table{
+    border-collapse: collapse;
+    border-radius: 25px;
+    width: 100%;
+    border: 1px black solid;
+    overflow: hidden;
+    background-color: rgb(22, 22, 22);
+    
+}
+th, td {
+   
+    padding: 10px 20px; 
+    border-bottom: 1px rgb(152, 151, 151) solid;
+    color: white;
+    
+}
+td{
+    background-color: rgb(31, 30, 30);
+    text-align: center;
+}
+th{
+    color: rgb(210, 211, 207);
+    border-bottom: 1px gray solid;
+    background-color: rgb(66, 64, 64);
+}
+.header{
+    
+    border: none;
+}
+.remark{
+    color: greenyellow;
+    
+}
+.failed{
+    color: rgb(255, 0, 0);
+}

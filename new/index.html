@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text" name="" id="inputTask">
+<button id="addTask">Add</button>
+<div id="list"></div>
+
+
+
+<script>
+
+
+let addbtn = document.getElementById('addTask')
+let listcontainer = document.getElementById('list')
+lists = []
+
+function renderTask(){
+    listcontainer.innerHTML = lists.map((task,index)=>
+`<p> ${task}
+    <button onclick ="deletebtn(${index})">delete</button>
+    </p> `
+).join("")
+}
+
+
+
+addbtn.addEventListener("click", function(){
+
+    let list =document.getElementById("inputTask").value
+
+    if(list !== ""){
+        lists.push(list)
+        alert("Added")
+        console.log(lists)
+        renderTask()
+    }
+    else{
+        alert("Please input the blank field")
+    }
+
+})
+function  deletebtn(index){
+    lists = lists.filter((task, i) => i !== index)
+    renderTask()
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d1117;
+    background-image:
+      linear-gradient(rgba(55, 138, 221, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(55, 138, 221, 0.15) 1px, transparent 1px),
+      linear-gradient(rgba(55, 138, 221, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(55, 138, 221, 0.05) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+    
+}
+.container{
+    width:  500px;
+    border: 1px rgb(178, 185, 201) solid;
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+}
+#sName, #sGrade, #submitbtn{
+    padding: 10px;
+    border-radius: 25px;
+}
+#info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+h1{
+    color: white;
+}
+#info{
+    color: white;
+}

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-image: url(lake-wakatipu-queenstown-new-zealand-snow-mountains-4795x3400-2125.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+.welcome h1{
+    font-size: 60px;
+}
+.login-container{
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 10px;
+    width: 500px;
+    background-color: rgba(38, 38, 41, 0.8);
+    border-radius: 25px;
+}
+.form{
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.form-container label{
+        color: white;
+        padding-left: 20px;
+}
+.signin{
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: 0.1s linear;
+    cursor: pointer;
+}
+.signin:hover{
+    color: black;
+    background-color: white;
+    transform: scaleX(1.1);
+}
+.forgot{
+    color: rgb(193, 193, 193);
+    font-weight: 300;
+}
+.signup{
+    color: rgb(193, 193, 193);
+    font-weight: 300;
+}

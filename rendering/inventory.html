@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+            <input type="text" name="" id="Iname" placeholder="enter item">
+            <input type="number" name="" id="quantity" placeholder="enter quantity">
+            <button id="addbtn">Add</button>
+            <div id="itemList"></div>
+
+
+
+    <script>
+
+        let addbtn = document.getElementById('addbtn')
+        let items = []
+
+        function renderItems(){
+
+            let itemList = document.getElementById('itemList')
+
+            itemList.innerHTML = items.map((item,index)=>
+            `<p> ${item.name} ${item.quantity}
+                <button onclick = "deletebtn(${index})">Delete</button>
+                 <button onclick = "editbtn(${index})">edit</button></p>`
+        ).join("")
+
+
+        }
+
+
+        addbtn.addEventListener("click", function(){
+
+            let itemname = document.getElementById('Iname').value
+            let itemquantity = Number(document.getElementById('quantity').value)
+
+            if (itemname !=="" && !isNaN(itemquantity)) {
+                items.push(
+                    {name: itemname, quantity: itemquantity}
+                )
+                alert("Item Added")
+                document.getElementById('Iname').value = ""
+                document.getElementById('quantity').value = ""
+                console.log(items)
+                renderItems()
+            }
+            else{
+                alert("please enter items")
+            }
+
+
+
+        })
+        function deletebtn(index){
+            items = items.filter((item,i)=> i!==index)
+            renderItems()
+        }
+        function editbtn(index){
+            let newItem = prompt("enter new Item: ",items[index].name)
+            let newQuantity = prompt("enter new Quantity: ",items[index].quantity)
+
+            if (newItem !=="" && newItem !==null) {
+                items[index].name = newItem
+            }
+            if(!isNaN(newQuantity)){
+                items[index].quantity = newQuantity
+            }
+            renderItems()
+        }
+
+
+
+    </script>
+</body>
+</html>

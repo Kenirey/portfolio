@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <input type="text" name="" id="taskInput">
+  <button id="addTask">Add</button>
+  <ul id="tasklist"></ul>
+    <script>
+
+/*
+let students = [
+  {name: "Ken", grade: 85},
+  {name: "Juan", grade: 60},
+  {name: "Maria", grade: 92},
+  {name: "Pedro", grade: 71},
+  {name: "Ana", grade: 78}
+]
+let names = students.map(function (studentName){
+
+        return{
+           name: studentName.name,
+           grade: studentName.grade,
+          remark: studentName.grade >= 75? "passed":"Failed"
+         
+        }
+
+})
+console.log(names)
+*/
+/*
+let students = [
+  {name: "Ken", grade: 85},
+  {name: "Juan", grade: 60},
+  {name: "Maria", grade: 92},
+  {name: "Pedro", grade: 71},
+  {name: "Ana", grade: 78}
+]
+
+let passing = students.filter(function (passed){
+    return passed.grade >=75
+})
+let remarks = passing.map(function (passed){
+    return `${passed.name} - ${passed.grade} — Passed`
+})
+
+console.log(remarks)
+*/
+/*
+let employees = [
+  {name: "Ken", salary: 15000},
+  {name: "Juan", salary: 8000},
+  {name: "Maria", salary: 22000},
+  {name: "Pedro", salary: 9500},
+  {name: "Ana", salary: 18000}
+]
+
+let highsal = employees.filter(function(salary){
+    return salary.salary >=12000
+})
+
+    let regulars = highsal.map(function(regular){
+        return `${regular.name} - ${regular.salary} - Regular`
+    })
+
+    console.log(regulars)
+*/
+/*
+function isEven(check) {
+  if (check % 2 === 0) {
+    alert("Even!")
+  } else {
+    alert("Odd!")
+  }
+}
+    
+let number = Number(prompt("Enter number"))
+isEven(number)
+    */
+/*
+    let students = [
+  {name: "Ken", grade: 85},
+  {name: "Juan", grade: 60},
+  {name: "Maria", grade: 92},
+  {name: "Pedro", grade: 71},
+  {name: "Ana", grade: 78}
+]
+
+ 1. Kuhanin yung minimum grade sa user
+let minGrade = Number(prompt("Ano ang minimum grade?"))
+
+// 2. I-filter yung students
+let passed = students.filter(function(student) {
+  return student.grade >= minGrade  // i-compare sa sinagot ng user
+})
+
+// 3. Kuhanin yung names lang
+let names = passed.map(function(student) {
+  return student.name
+})
+
+// 4. I-alert yung result
+alert("Mga pumasa: " + names.join(", "))
+
+*/
+/*
+let products = [
+  {name: "Laptop", price: 50000},
+  {name: "Phone", price: 15000},
+  {name: "Tablet", price: 25000},
+  {name: "Watch", price: 8000},
+  {name: "Headphones", price: 3000}
+]
+
+let maxBudget = Number(prompt("Ano ang maximum budget mo?"))
+
+let affordable = products.filter(function (afford){
+    return afford.price <= maxBudget
+
+})
+
+let product = affordable.map(function(name){
+    return name.name
+
+})
+
+alert("Affordable product base on your budget: " + product.join(" , "))*/
+/*
+let scores = [55, 80, 90, 60, 75, 45, 88]
+
+let name = prompt("Enter student name: ")
+let score = Number(prompt("Enter grade: "))
+
+scores.push(score)
+
+let total = 0
+let avg = 0
+
+for (let i = 0; i < scores.length; i++) {
+
+    total += scores[i]
+    avg = total / scores.length
+}
+
+  alert( name +" Average: "+avg)
+
+*/
+/*
+const isEven = (num) => num %2 === 0? "Even" : "Odd"
+
+console.log(isEven(1))
+*/
+/*
+let students = [
+  {name: "Ken", grade: 85},
+  {name: "Juan", grade: 60},
+  {name: "Maria", grade: 92},
+  {name: "Pedro", grade: 71},
+  {name: "Ana", grade: 78}
+]
+
+let passed = students.filter(student => student.grade >= 75 )
+let studentName = passed.map(Sname => Sname.name)
+    
+console.log(studentName)
+  */  
+/*
+  let employees = [
+  {name: "Ken", salary: 15000, department: "IT"},
+  {name: "Juan", salary: 8000, department: "HR"},
+  {name: "Maria", salary: 22000, department: "IT"},
+  {name: "Pedro", salary: 9500, department: "HR"},
+  {name: "Ana", salary: 18000, department: "IT"}
+]
+    
+let employee = employees.filter(employee => employee.department === "IT")
+let info = employee.map(employee => employee.name + " - " + employee.salary + " - "+ employee.department)
+    
+    console.log(info)
+    */
+/*
+
+    let employees = [
+  {name: "Ken", salary: 15000, department: "IT"},
+  {name: "Juan", salary: 8000, department: "HR"},
+  {name: "Maria", salary: 22000, department: "IT"},
+  {name: "Pedro", salary: 9500, department: "HR"},
+  {name: "Ana", salary: 18000, department: "IT"}
+]
+
+      let dept = prompt("Anong department?")
+      let minSalary = Number(prompt("Ano ang minimum salary?"))
+
+      let match = employees.filter(match => match.department.toLowerCase() === dept.toLowerCase() && match.salary>=minSalary )
+      let info = match.map(result=> result.name +" - " +result.salary+" - " +result.department)
+
+      alert("Are looking for: "+info.join(", " ))
+*/
+ /*
+ 
+ 
+  let mybtn =  document.querySelector("#btn")
+
+  mybtn.addEventListener("click", () =>  alert("nagclick na") )
+ */
+ /*
+ let myh1 = document.getElementById("h1")
+ let mybtn = document.querySelector("#btn")
+ 
+     // mybtn.addEventListener("click",()=>myh1.textContent = "hello broskiedo")
+      myh1.style.color = "green"
+     mybtn.addEventListener("click",function(){
+
+   
+      
+      
+
+      if (myh1.textContent === "hello broskiedo!") {
+          myh1.textContent = "bye broskiedo!"
+          myh1.style.color = "red"
+      } else {
+        myh1.textContent = "hello broskiedo!"
+        myh1.style.color = "green"
+      }
+
+
+     })
+*/
+/*
+        let addBtn = document.getElementById("add-btn")
+        let subtractbtn = document.getElementById("subtract-btn")
+        let prodbtn = document.getElementById("prod-btn")
+        let quobtn= document.getElementById("quo-btn")
+        let result = document.getElementById("result")
+      
+          addBtn.addEventListener("click", function(){
+            
+        let myInput1 = Number(document.getElementById("num1").value)
+        let myInput2 = Number(document.getElementById("num2").value)
+        let sum = myInput1 + myInput2
+        result.textContent = "The sum is: " + sum
+          }  )
+          subtractbtn.addEventListener("click", function(){
+            let myInput1 = Number(document.getElementById("num1").value)
+        let myInput2 = Number(document.getElementById("num2").value)
+        let dif = myInput1 - myInput2
+        result.textContent = "The sum is: " + dif
+
+
+          })
+          prodbtn.addEventListener("click", function(){
+            let myInput1 = Number(document.getElementById("num1").value)
+        let myInput2 = Number(document.getElementById("num2").value)
+        let prod = myInput1 * myInput2
+        result.textContent = "The sum is: " + prod
+          })
+          quobtn.addEventListener("click", function(){
+            let myInput1 = Number(document.getElementById("num1").value)
+        let myInput2 = Number(document.getElementById("num2").value)
+        let quo = myInput1 / myInput2
+        result.textContent = "The sum is: " + quo
+          })
+*/
+/*
+
+let addone = document.getElementById('addone')
+let difone = document.getElementById('difone')
+let reset = document.getElementById('reset')
+let result = document.getElementById('result')
+
+addone.addEventListener("click", function(){
+  let add = Number(result.textContent)
+  add++
+  result.textContent = add
+})
+*/
+
+function renderTasks(){
+  tasklist.innerHTML = tasks.map((task, index) => 
+    `<li style="text-decoration: ${task.done ? 'line-through' : 'none'}">
+      ${task.text}
+      <button onclick="toggleDone(${index})">Done</button>
+      <button onclick = "editTask(${index})">Edit</button>
+       <button onclick="deleteTask(${index})">Delete</button>
+       </li>`
+  ).join("")
+}
+
+
+let addtask = document.getElementById('addTask')
+let tasks = []
+let tasklist = document.getElementById('tasklist')
+addtask.addEventListener("click", function(){
+  let taskInput = document.getElementById('taskInput').value
+
+  if(taskInput !== ""){
+  tasks.push( 
+{ text: taskInput, done: false }
+  )
+   document.getElementById('taskInput').value = ""
+  console.log(tasks)
+  alert("Task Added!")
+}
+else{
+  alert("Please input task before you add")
+}
+renderTasks()
+
+})
+
+function deleteTask(index){
+  tasks = tasks.filter((task, i) => i !== index)
+  renderTasks()
+  
+}
+
+function editTask(index){
+  
+  let newTask = prompt("Edit task:", tasks[index].text)
+
+
+
+
+  if (newTask !=="" && newTask !==null) {
+      tasks[index].text = newTask
+  }
+  renderTasks()
+}
+function toggleDone(index){
+ 
+  tasks[index].done = !tasks[index].done
+  renderTasks()
+}
+
+ </script>
+</body>
+</html>

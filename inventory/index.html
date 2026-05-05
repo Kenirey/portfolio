@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+
+        <div class="container">
+
+
+
+            <aside class="sidebar">
+
+
+                <div class="side-title">
+
+                    <img src="profile.png" alt="profile" style="height: 40px; border-radius: 50%;">
+                    <h1>Inventory</h1>
+
+                </div>
+
+
+                <div class="side-link">
+
+                   
+                        <a href="" class="link"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="" class="link"><i class="fa fa-cart-plus"></i> Products</a>
+                        <a href="" class="link"><i class="fa fa-file-text"></i> Reports</a>
+                        <a href="" class="link"><i class="fa fa-gear"></i> Settings</a>
+                    
+                    
+
+                </div>
+
+            </aside>
+
+
+
+
+
+
+            <main class="main">
+
+                <div class="main-top">
+
+                    <div class="top-title">
+                    <h2>Dashboard</h2>
+                    <span>Track and manage your inventory  </span>
+                </div>
+
+                <div class="top-btn">
+                    <button id="addbtn">+ Add Product</button>
+                </div>
+
+                </div>
+
+
+
+                <div class="main-cards">
+
+                    <div class="card">
+                        <span class="card-title">TOTAL PRODUCT</span>
+                        <h3 id="total">0</h3>
+                        <span class="tag tag-blue">all items</span>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-title">IN STOCK</span>
+                        <h3 id="inStock">0</h3>
+                        <span class="tag tag-green">qty > 5</span>
+                    </div>
+
+                    <div class="card">
+                        <span class="card-title">LOW STOCK</span>
+                        <h3 id="lowStock">0</h3>
+                        <span class="tag tag-amber">qty 1-5</span>
+                        
+                    </div>
+
+                    <div class="card">
+                        <span class="card-title">TOTAL VALUE</span>
+                        <h3 id="pirceValue">0</h3>
+                        <span class="tag tag-purple">total price</span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="main-table">
+
+                    <div class="table-search">
+                        <span>Product List</span>
+                        <input type="text" name="" id="searchInput" placeholder="Search Product or Category...">
+                    </div>
+
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>PRODUCT</th>
+                                <th>CATEGORY</th>
+                                <th>PRICE</th>
+                                <th>QTY</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tbody"></tbody>
+                    </table>
+
+                    
+                </div>
+
+
+            </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+
+            <div class="container-two" id="container-two">
+
+                <div class="modal">
+
+                    <div class="modal-head">
+                        <span>Add Product</span>
+                       <button id="closebtn">X</button>
+                    </div>
+
+                    <div class="form">
+                        <div class="prod-input">
+                        <label for="product" style="color:rgb(142, 142, 125)  ;">Product Name</label>
+                        <input type="text" name="" id="product" placeholder="e.g Laptop">
+                    </div>
+
+                        <div class="modal-category">
+                            <label for="category" style="color:rgb(142, 142, 125)  ;">Category</label>
+                        <select id="category">
+                            <option value="Select Category">Select Category</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Supplies">Supplies</option>
+                            <option value="Food">Food</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Tools">Tools</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                        <div class="p-and-q">
+                            <div class="p">
+                            <label for="price" style="color:rgb(142, 142, 125)  ;">Price (P)</label>
+                            <input type="number" id="price">
+                        </div>
+                        <div class="q">
+                            
+                            
+                            <label for="qty" style="color:rgb(142, 142, 125)  ;">Quantity (Q)</label>
+                            <input type="number" name="" id="qty">
+                        </div>
+                        </div>
+
+
+                        <div class="btns">
+                            <button id="cancelbtn">Cancel</button>
+                            <button id="addProductbtn" style="background-color: black; color: white;">Add Product</button>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
